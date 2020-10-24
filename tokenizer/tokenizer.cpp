@@ -13,6 +13,8 @@ vector<fs::path> get_input_texts(fs::path _input) {
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
+
 	fs::path input;
 	cout << "Insert path with txts: ";
 	cin >> input;
@@ -25,7 +27,9 @@ int main()
 	for (auto x : vector_of_texts) {
 		parser _parser(x);
 		_parser.parse_predl();
-		lemmatizator _lemmatizator(_parser.get_list_of_predl_and_words(), ("texts.csv"));
+		auto b = (input / x.stem()).string();
+		b += ".csv";
+		lemmatizator _lemmatizator(_parser.get_list_of_predl_and_words(), b);
 		_lemmatizator.make_it();
 
 	}
