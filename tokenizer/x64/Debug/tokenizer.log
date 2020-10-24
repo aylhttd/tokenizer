@@ -1,2 +1,4 @@
-﻿  tokenizer.cpp
+﻿  lemmatizator.cpp
+  tokenizer.cpp
+  Создание кода...
   tokenizer.vcxproj -> A:\Tokenizer\tokenizer\x64\Debug\tokenizer.exe
