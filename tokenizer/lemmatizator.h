@@ -1,5 +1,5 @@
 #pragma once
-#include "list_of_types.h"
+#include "parser.h"
 
 class lemmatizator
 {

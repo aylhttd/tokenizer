@@ -13,5 +13,12 @@ vector<fs::path> get_input_texts() {
 
 int main()
 {
-	auto vector_of_texts = get_input_texts();.
+	auto vector_of_texts = get_input_texts();
+	for (auto x : vector_of_texts) {
+		parser _parser(x);
+		_parser.parse_predl();
+		lemmatizator _lemmatizator(_parser.get_list_of_predl_and_words(), ("texts.csv"));
+		_lemmatizator.make_it();
+
+	}
 }

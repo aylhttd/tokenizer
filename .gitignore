@@ -2,3 +2,6 @@
 .vs/tokenizer/v16/.suo
 *.db
 *.ipch
+*.db-shm
+*.db-wal
+*.opendb
