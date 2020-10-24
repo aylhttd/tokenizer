@@ -41,7 +41,7 @@ pair<int, list<string>> lemmatizator::create_lemmas(pair<int, list<string>> _wor
 string lemmatizator::create_csv_line(pair<int, list<string>> list_of_lemmatized_words)
 {
 	string out = "";
-	out += list_of_lemmatized_words.first;
+	out += to_string(list_of_lemmatized_words.first);
 	out += ";[";
 	for (auto word : list_of_lemmatized_words.second) {
 		string add = "'" + word + "',";
@@ -56,7 +56,7 @@ string lemmatizator::create_csv_line(pair<int, list<string>> list_of_lemmatized_
 void lemmatizator::create_csv(list<string> lines)
 {
 	ofstream to_csv(this->_filename);
-	to_csv << "; Comment" << endl;
+	to_csv << "num; Comment" << endl;
 	if (to_csv.is_open())
 		for (auto line : lines) {
 		to_csv << line << endl;
