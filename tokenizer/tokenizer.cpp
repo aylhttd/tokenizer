@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 #include "lemmatizator.h"
 
-vector<fs::path> get_input_texts() {
-	auto input_path = TEXTS_PATH/*fs::current_path()/"inputfiles"*/;
+vector<fs::path> get_input_texts(fs::path _input) {
+	auto input_path = _input/*fs::current_path()/"inputfiles"*/;
 	fs::recursive_directory_iterator begin(input_path);
 	fs::recursive_directory_iterator end;
 	std::vector<fs::path> txtFiles;
@@ -13,7 +13,15 @@ vector<fs::path> get_input_texts() {
 
 int main()
 {
-	auto vector_of_texts = get_input_texts();
+	fs::path input;
+	cout << "Insert path with txts: ";
+	cin >> input;
+	if (!fs::exists(input)) {
+		cout << "error path";
+		exit(0);
+	}
+
+	auto vector_of_texts = get_input_texts(input);
 	for (auto x : vector_of_texts) {
 		parser _parser(x);
 		_parser.parse_predl();

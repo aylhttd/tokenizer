@@ -1,9 +1,1 @@
-﻿  lemmatizator.cpp
-  parser.cpp
-C:\Users\Dmitry\Documents\GitHub\tokenizer\tokenizer\parser.cpp(59,14): warning C4129: : неизвестная escape-последовательность
-C:\Users\Dmitry\Documents\GitHub\tokenizer\tokenizer\parser.cpp(60,19): warning C4129: [: неизвестная escape-последовательность
-C:\Users\Dmitry\Documents\GitHub\tokenizer\tokenizer\parser.cpp(61,17): warning C4129: -: неизвестная escape-последовательность
-C:\Users\Dmitry\Documents\GitHub\tokenizer\tokenizer\parser.cpp(61,17): warning C4129: : неизвестная escape-последовательность
-  tokenizer.cpp
-  Создание кода...
-  tokenizer.vcxproj -> C:\Users\Dmitry\Documents\GitHub\tokenizer\x64\Debug\tokenizer.exe
+﻿  tokenizer.vcxproj -> C:\Users\Dmitry\Documents\GitHub\tokenizer\x64\Debug\tokenizer.exe
