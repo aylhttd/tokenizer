@@ -33,6 +33,9 @@ void parser::create_list_of_predl_and_words(int _counter_of_predl, string _predl
 		string substring_word = _predl.substr(0, _predl.find(' '));
 		_predl = _predl.substr(_predl.find(' ') + 1, _predl.size());
 
+		/*if (_predl.find(' ') == _predl.npos)
+			_predl.clear;*/
+
 		if (stop_words.find(substring_word) != stop_words.end())
 			substring_word = "a";
 
@@ -88,6 +91,5 @@ string parser::delete_trash(string _predloz)
 		if (text[text.size()-1]!=' ')
 			text.push_back(' ');
 	
-		return _predloz;
-
+		return text;
 }
