@@ -8,15 +8,18 @@ class parser
 public:
 	parser() {}
 	parser(fs::path filename) : _filename(filename) {}
-	list<string> parse();
+	void parse_predl();
 	void set_filename(fs::path filename);
-	void check_all_words(string text);
-	list<string> delete_trash();
+	string delete_trash(string _list_predloz);
+	void create_list_of_predl_and_words(int _counter_of_predl, string _predl);
+	list<pair<int, list<string>>> get_list_of_predl_and_words() const;
 	~parser() {
 		stop_words.clear();
 	}
 
 private:
+	list<string> _parsed_predl;
+	list<pair<int, list<string>>> _list_of_predl_and_words;
 	fs::path _filename;
 	set<string> stop_words = {
 "а-ля",
